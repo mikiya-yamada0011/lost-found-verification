@@ -141,4 +141,5 @@ Entra ID のアプリ登録は、**学生向け Web アプリに「大学 Micros
 Dataverseを使える場合についても。
 
 - 本学に Power Apps / Power Automate のプレミアムライセンスの契約はあり、検証用アカウント（istc-dxsuiu37 / istc-dxsuiu36）に割り当て可能か
+  
 - 本番運用時、ライセンスが必要になるのは誰か（利用する学生の人数に応じて増えるのか、環境やフロー単位で済むのか）
