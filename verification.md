@@ -30,6 +30,8 @@ SharePoint：リスト（FoundItems）
 
 ### 動作確認動画
 
+[apps.powerapps.com/play/e/4673518f-05bc-e242-9104-50370b6e23b6/a/312cf735-b6d6-404e-8938-c39dbed804cb?tenantId=20ee4c80-87bd-422c-a506-3a2b0aca0615&amp;hint=230c3147-c336-406e-83a8-ec7418282c47&amp;sourcetime=1787505204561](https://apps.powerapps.com/play/e/4673518f-05bc-e242-9104-50370b6e23b6/a/312cf735-b6d6-404e-8938-c39dbed804cb?tenantId=20ee4c80-87bd-422c-a506-3a2b0aca0615&hint=230c3147-c336-406e-83a8-ec7418282c47&sourcetime=1787505204561)
+
 <video controls width="100%">
   <source src="./レコーディング 2026-08-24 003442.mp4" type="video/mp4">
   この環境では動画を再生できません。
