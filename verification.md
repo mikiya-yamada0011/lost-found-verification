@@ -67,7 +67,9 @@ SharePoint：リスト（FoundItems）
 
 [Microsoft公式のPower Automate価格ページ](https://www.microsoft.com/ja-jp/power-platform/products/power-automate/pricing#tabs-pill-bar-ocd242_tab0)
 
-上記のurlでProcessプランが年額27万(税別)かかることが確認できる。
+上記のurlでProcessプランが年額約27万(税別)かかることが確認できる。
+
+この3つのurlの情報からHTTP要求トリガーには最低でも年額約27万かかることがわかる。
 
 ## 2.2 独自APIとMicrosoft Graphを経由して取得する
 
