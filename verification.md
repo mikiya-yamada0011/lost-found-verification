@@ -55,6 +55,9 @@ SharePoint：リスト（FoundItems）
 
 ライセンスがないにもかかわらず動作している理由は未確認だが、ライセンス違反を検出してから停止するまでの猶予期間や、ライセンス判定の反映遅延等が考えられる。
 
+[Microsoft公式のPower Automate価格ページ
+](https://www.microsoft.com/ja-jp/power-platform/products/power-automate/pricing#tabs-pill-bar-ocd242_tab0)
+
 ## 2.2 独自APIとMicrosoft Graphを経由して取得する
 
 年間約27万円かかるPower Automate Process方式以外では、独自APIからMicrosoft Graphへ接続し、SharePointから情報を取得する方式が考えられる。
