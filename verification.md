@@ -35,6 +35,18 @@ SharePoint：リスト（FoundItems）
   この環境では動画を再生できません。
 </video>
 
+## 1.3 Entra ID管理画面へのアクセス状況
+
+検証用アカウントで、次のEntra ID管理画面へアクセスを試したが、現在もアクセスできない。
+
+- [Microsoft Entra管理センター](https://entra.microsoft.com/)
+
+![1787503074717](image/verification/1787503074717.png)
+
+今回追加された「環境作成者」と「システムカスタマイザー」は、Power Platform環境内でアプリやフロー、Dataverse等を扱うための権限である。Entra ID管理画面へのアクセスやアプリ登録を行う権限とは別のため、これらの追加後もEntra IDへのアクセス状況は変わっていない。
+
+学生向け画面の大学アカウント認証や、独自APIからMicrosoft Graphを経由してSharePointへ接続する検証には、大学側でのEntra IDアプリ登録またはEntra ID側の権限設定が別途必要になる。
+
 # 2. 学生向け画面（React）からSharePointの拾得物情報を取得する方法
 
 ## 2.1 Power Automateを経由して取得する
