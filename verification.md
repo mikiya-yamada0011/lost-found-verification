@@ -57,8 +57,17 @@ SharePoint：リスト（FoundItems）
 
 ライセンスがないにもかかわらず動作している理由は明確にはわからなかったが、ライセンス違反を検出してから停止するまでの猶予期間や、ライセンス判定の反映遅延等が考えられる。
 
-[Microsoft公式のPower Automate価格ページ
-](https://www.microsoft.com/ja-jp/power-platform/products/power-automate/pricing#tabs-pill-bar-ocd242_tab0)
+[Microsoft Learn：サイトスクリプトからのPower Automateの呼び出し](https://learn.microsoft.com/ja-jp/sharepoint/dev/declarative-customization/site-design-trigger-flow-tutorial#%E3%83%95%E3%83%AD%E3%83%BC%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B)
+
+上記のurl内に「**注** : **要求**トリガーは**プレミアム**になったので、追加のライセンスが必要になります。」と記載がある。
+
+[Microsoft Learn：どのPower Automateライセンスが必要ですか](https://learn.microsoft.com/ja-jp/power-platform/admin/power-automate-licensing/faqs#%E3%81%A9%E3%81%AE-power-automate-%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E3%81%8C%E5%BF%85%E8%A6%81%E3%81%A7%E3%81%99%E3%81%8B)
+
+上記のurl内に「プレミアムフローは複数のユーザーが呼び出します。 この場合、全員にプレミアムライセンスが必要か、フローにプロセスライセンスが必要です。」と記載がある。
+
+[Microsoft公式のPower Automate価格ページ](https://www.microsoft.com/ja-jp/power-platform/products/power-automate/pricing#tabs-pill-bar-ocd242_tab0)
+
+上記のurlでProcessプランが年額27万(税別)かかることが確認できる。
 
 ## 2.2 独自APIとMicrosoft Graphを経由して取得する
 
