@@ -35,15 +35,15 @@ SharePoint：リスト（FoundItems）
   この環境では動画を再生できません。
 </video>
 
-# 2. 本番接続方式の二つの選択肢
+# 2. 学生向け画面（React）からSharePointの拾得物情報を取得する方法
 
-## 2.1 Power AutomateのHTTPトリガーを使用する方式
+## 2.1 Power Automateを経由して取得する
 
 現在のHTTPトリガーはプレミアム機能であり、指定環境で使用可能なProcessライセンスはない。Processライセンスは、1ライセンス当たり**年間約27万円（税別）**かかることが分かった。
 
 ライセンスがないにもかかわらず動作している理由は未確認だが、ライセンス違反を検出してから停止するまでの猶予期間や、ライセンス判定の反映遅延等が考えられる。
 
-## 2.2 独自APIからMicrosoft Graphへ接続する方式
+## 2.2 独自APIとMicrosoft Graphを経由して取得する
 
 年間約27万円かかるPower Automate Process方式以外では、独自APIからMicrosoft Graphへ接続し、SharePointから情報を取得する方式が考えられる。
 
