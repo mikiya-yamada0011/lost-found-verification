@@ -55,7 +55,7 @@ SharePoint：リスト（FoundItems）
 
 現在のHTTPトリガーはプレミアム機能であり、指定環境で使用可能なProcessライセンスはない。Processライセンスは、1ライセンス当たり**年間約27万円（税別）**かかることが分かった。
 
-ライセンスがないにもかかわらず動作している理由は未確認だが、ライセンス違反を検出してから停止するまでの猶予期間や、ライセンス判定の反映遅延等が考えられる。
+ライセンスがないにもかかわらず動作している理由は明確にはわからなかったが、ライセンス違反を検出してから停止するまでの猶予期間や、ライセンス判定の反映遅延等が考えられる。
 
 [Microsoft公式のPower Automate価格ページ
 ](https://www.microsoft.com/ja-jp/power-platform/products/power-automate/pricing#tabs-pill-bar-ocd242_tab0)
