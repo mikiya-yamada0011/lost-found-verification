@@ -1,3 +1,11 @@
+k
+
+# 落とし物システム　技術検証結果と本番構成の相談
+
+## 今回の目的
+
+技術検証の結果を共有し、学生向けWeb画面からSharePointへ接続する方式と、データの保存先についてを確認する。
+
 # 1. 動作確認できたこと
 
 ## 1.1 学生向けWebアプリとSharePointの接続
@@ -53,9 +61,9 @@ SharePoint：リスト（FoundItems）
 
 ## 2.1 Power Automateを経由して取得する
 
-現在のHTTP要求トリガーはプレミアム機能であり、指定環境で使用可能なProcessライセンスはない。Processライセンスは、1ライセンス当たり**年間約27万円（税別）**かかることが分かった。
+現在のHTTP要求トリガーはプレミアム機能であり、指定環境ではProcessライセンスを契約していない。多数の学生が利用する本番構成でこの方式を採用する場合、Processライセンスを1つ新規購入する案が現実的であり、公開価格は**年間約27万円（税別）**となる。
 
-ライセンスがないにもかかわらず、「1.1 学生向けWebアプリとSharePointの接続」の動作確認で、動作していた理由は明確にはわからなかったが、ライセンス違反を検出してから停止するまでの猶予期間や、ライセンス判定の反映遅延等が考えられる。
+検証環境でHTTP要求トリガーは動作したが、契約がないまま動作する理由は確認できていない。動作したことと本番で利用できることは別のため、現在の構成は検証用とする。
 
 [Microsoft Learn：サイトスクリプトからのPower Automateの呼び出し](https://learn.microsoft.com/ja-jp/sharepoint/dev/declarative-customization/site-design-trigger-flow-tutorial#%E3%83%95%E3%83%AD%E3%83%BC%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B)
 
@@ -81,11 +89,16 @@ Microsoft Graphの通常のSharePointリスト操作には追加のAPI料金は�
 
 # 3. データの保存先
 
-Dataverseではなく、保存先の第一候補をSharePointとする。
+現時点の提案として、Dataverseではなく、保存先の第一候補をSharePointとする。
 
 理由は次のとおり。
 
-- 職員がPower AppsからDataverseへ直接接続する構成では、原則として、利用する職員ごとにPower Apps Premium等のDataverse利用権が必要になり、金額が膨大に。
+- 職員がPower AppsからDataverseへ直接接続する構成では、原則として、利用する職員ごとにPower Apps Premium等のDataverse利用権が必要になり、職員数に応じて費用が増える。
 - ProcessライセンスではDataverse接続の利用権を利用者ではなくフローに持たせられるが、職員・学生の全操作をそのフロー経由にする必要があり、SharePoint案よりフロー数と保守範囲が増える。
 
 そのため、現時点ではDataverseの利点よりライセンスと構成の負担が大きいと判断する。
+
+# 4. 今回確認したいこと
+
+1. Processライセンスを新規購入するか、独自API方式で進めるか
+2. 独自API方式の場合、認証とは別に外部からsharepointへアクセスを許可する認可が必要になるが、大学側にEntra IDのアプリ登録を依頼できるか
