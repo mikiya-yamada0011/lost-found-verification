@@ -154,7 +154,7 @@
 動画：
 
 <video controls width="100%">
-  <source src="./video/申し込みなしで返却.mp4" type="video/mp4">
+  <source src="./video/返却.mp4" type="video/mp4">
   この環境では動画を再生できません。
 </video>
 
