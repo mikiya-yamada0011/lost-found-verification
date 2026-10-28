@@ -14,6 +14,8 @@
 
 ![1792918432406](image/sharepoint-spfx-followup/1792918432406.png)
 
+[上の画像の画面を開く：検証サイトのアプリカタログ](https://cloudkobeu.sharepoint.com/teams/t-dxsuisin-tesvd2/AppCatalog/Forms/AllItems.aspx)
+
 # 2. アプリで変更・検証したこと
 
 | 対象     | 変更・確認内容                                                                                                                                           |
