@@ -66,15 +66,25 @@
 
 権限の設定後、その管理者アカウントでカタログの有効化処理を改めて実行していただきたい。
 
-今回の再構成案は、対象サイトのカタログを一度無効化し、再有効化する手順とする。SharePoint Online Management Shellから次を実行する。
+今回の再構成案は、対象サイトのカタログを一度無効化し、再有効化する手順とする。
+
+管理者のWindows PCで「SharePoint Online Management Shell」を開く。未インストールの場合は、[Microsoft公式ページ](https://www.microsoft.com/en-us/download/details.aspx?id=35588)からインストールする。
+
+以下のコード全体を貼り付けて実行し、ブラウザが開いたら①・②・③の権限を持つ管理者アカウントでログインする。接続成功後に無効化・再有効化へ進み、エラーが発生した場合は後続のコマンドを実行せず中止する。
 
 ```powershell
-& {
-    Connect-SPOService -Url https://cloudkobeu-admin.sharepoint.com -ErrorAction Stop
+try {
+    Connect-SPOService -Url https://cloudkobeu-admin.sharepoint.com -UseSystemBrowser $true -ErrorAction Stop
     Remove-SPOSiteCollectionAppCatalog -Site https://cloudkobeu.sharepoint.com/teams/t-dxsuisin-tesvd2 -ErrorAction Stop
     Add-SPOSiteCollectionAppCatalog -Site https://cloudkobeu.sharepoint.com/teams/t-dxsuisin-tesvd2 -ErrorAction Stop
+    Write-Host 'カタログの再有効化が完了しました。'
+}
+catch {
+    Write-Error "処理を中止しました。詳細: $($_.Exception.Message)" -ErrorAction Continue
 }
 ```
+
+成功・失敗にかかわらず、PowerShellの実行結果を共有いただきたい。認証画面・パスワードの共有は不要。途中で失敗した場合、完了済みの操作は自動で元に戻らないため、実行結果を確認して次の対応を判断する。
 
 `Remove-SPOSiteCollectionAppCatalog` はカタログ機能を無効化する操作であり、ライブラリを削除する操作ではない。この無効化・再有効化は、公式の管理コマンドを用いた復旧案である。[Microsoft公式の有効化・無効化手順](https://learn.microsoft.com/en-us/sharepoint/dev/general-development/site-collection-app-catalog)
 
